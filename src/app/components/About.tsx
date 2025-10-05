@@ -13,8 +13,8 @@ const About = () => {
             <Image
               src="/profile.jpeg"
               alt="Akbar Khaerullah"
-              layout="fill"
-              objectFit="cover"
+              fill 
+              className="object-cover" 
             />
           </div>
           {/* Kolom Teks */}

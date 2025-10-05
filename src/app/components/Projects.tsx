@@ -6,9 +6,9 @@ const projectData = [
   {
     title: "Web Aplikasi Panduan Karier Siswa SMA-Z",
     description: "Web Aplikasi untuk melakukan tes minat dan bakat untuk siswa SMA Z berbasis RIASEC dengan Nextjs dan MongoDB.",
-    image: "/project1.png", // Path dari folder public
+    image: "/project1.png", 
     liveLink: "https://panduan-karier-sma-z.vercel.app/",
-    codeLink: "https://github.com/AkbarTambora/panduan-karier-sma-z", // Ganti dengan link repo proyek
+    codeLink: "https://github.com/AkbarTambora/panduan-karier-sma-z", 
     tags: ['React', 'Node.js', 'MongoDB', 'Express']
   },
   // Project Lain
@@ -26,9 +26,8 @@ const Projects = () => {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="transition-transform duration-300 group-hover:scale-105"
+                  fill 
+                  className="object-cover transition-transform duration-300 group-hover:scale-105" 
                 />
               </div>
               <div className="p-6">
