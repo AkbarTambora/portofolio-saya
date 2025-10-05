@@ -1,10 +1,42 @@
-// app/components/Skills.tsx
+// src/app/components/Skills.tsx
 import React from 'react';
+import { FaReact, FaNodeJs, FaDocker, FaFigma, FaAndroid } from 'react-icons/fa';
+import { SiNextdotjs, SiMongodb, SiKubernetes, SiAngular, SiKotlin } from 'react-icons/si';
+
+// 1. Definisikan tipe data untuk setiap objek skill
+interface Skill {
+  name: string;
+  icon: React.ReactNode; // Menggunakan React.ReactNode untuk tipe data ikon
+}
+
+// 2. Terapkan tipe data tersebut ke array 'skills'
+const skills: Skill[] = [
+  { name: 'Web Developer', icon: <FaReact size={48} /> },
+  { name: 'Next.js', icon: <SiNextdotjs size={48} /> },
+  { name: 'Angular', icon: <SiAngular size={48} /> },
+  { name: 'Node.js', icon: <FaNodeJs size={48} /> },
+  { name: 'MongoDB', icon: <SiMongodb size={48} /> },
+  { name: 'Android Studio', icon: <FaAndroid size={48} /> },
+  { name: 'Kotlin', icon: <SiKotlin size={48} /> },
+  { name: 'Figma', icon: <FaFigma size={48} /> },
+  { name: 'Docker', icon: <FaDocker size={48} /> },
+  { name: 'Kubernetes', icon: <SiKubernetes size={48} /> },
+];
 
 const Skills = () => {
   return (
-    <section id="skills" className="flex h-screen items-center justify-center">
-      <h1 className="text-4xl font-bold">Skills Section</h1>
+    <section id="skills" className="py-24">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-16">Skills & Technologies</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 max-w-4xl mx-auto">
+          {skills.map((skill) => (
+            <div key={skill.name} className="flex flex-col items-center justify-center p-4 bg-gray-800 rounded-lg transition-transform hover:-translate-y-2">
+              <div className="text-blue-400 mb-3">{skill.icon}</div>
+              <p className="font-semibold">{skill.name}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };
