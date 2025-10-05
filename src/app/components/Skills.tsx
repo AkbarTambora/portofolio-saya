@@ -6,13 +6,11 @@ import { motion } from 'framer-motion';
 import { FaReact, FaNodeJs, FaDocker, FaFigma, FaAndroid } from 'react-icons/fa';
 import { SiNextdotjs, SiMongodb, SiKubernetes, SiAngular, SiKotlin } from 'react-icons/si';
 
-// 1. Definisikan tipe data untuk setiap objek skill
 interface Skill {
   name: string;
-  icon: React.ReactNode; // Menggunakan React.ReactNode untuk tipe data ikon
+  icon: React.ReactNode; 
 }
 
-// 2. Terapkan tipe data tersebut ke array 'skills'
 const skills: Skill[] = [
   { name: 'Web Developer', icon: <FaReact size={48} /> },
   { name: 'Next.js', icon: <SiNextdotjs size={48} /> },
