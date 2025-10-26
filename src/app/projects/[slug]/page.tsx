@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+// test
 
 type ProjectPageProps = {
   params: Promise<{ 
