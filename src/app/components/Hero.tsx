@@ -9,7 +9,7 @@ const Hero = () => {
         Akbar Khaerullah
       </h1>
       <p className="text-xl md:text-2xl text-gray-300 mb-8">
-        Full-Stack Developer & UI/UX Enthusiast
+        DevOps Engineer | Full-Stack Developer
       </p>
       <div className="flex gap-4">
         <a 
